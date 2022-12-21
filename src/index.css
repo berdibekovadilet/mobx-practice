@@ -24,18 +24,3 @@ th {
   text-align: left;
   padding: 8px;
 }
-
-.btnWrapper {
-  display: flex;
-  gap: 16px;
-}
-
-button {
-  border-style: none;
-  width: 100px;
-  font-size: 18px;
-  padding: 8px 24px;
-  border-radius: 2px;
-  background-color: azure;
-  cursor: pointer;
-}
