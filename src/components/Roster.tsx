@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 import Athlete from "../store/athlete";
+import TradeForm from "./TradeForm";
 
 const lebronJames = new Athlete("Lebron James", 30);
 const stephCurry = new Athlete("Steph Curry", 34);
@@ -10,6 +11,8 @@ const Roster = observer(() => {
       <tr>
         <th>Name</th>
         <th>Age</th>
+        <th>Teams</th>
+        <th>Trade Form</th>
         <th>Is it their birthday?</th>
       </tr>
       {[lebronJames, stephCurry].map((athlete) => {
@@ -17,6 +20,10 @@ const Roster = observer(() => {
           <tr key={athlete.name}>
             <td>{athlete.name}</td>
             <td>{athlete.age}</td>
+            <td>{athlete.teamHistory}</td>
+            <td>
+              <TradeForm athlete={athlete} />
+            </td>
             <td>
               <button
                 type="button"

@@ -11,6 +11,7 @@ class Athlete {
     this.teamHistory = [];
 
     makeObservable(this, {
+      tradePlayer: action,
       wishHappyBirthday: action,
       name: observable,
       age: observable,
@@ -20,6 +21,9 @@ class Athlete {
 
   wishHappyBirthday() {
     this.age++;
+  }
+  tradePlayer(team: string) {
+    this.teamHistory.push(team);
   }
 }
 export default Athlete;
