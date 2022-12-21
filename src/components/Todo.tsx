@@ -18,7 +18,11 @@ const Todo = observer(() => {
       <div className="addTodoWrapper">
         <input type="text" onChange={(e) => addNewTodo(e)} />
         <button onClick={() => todo.addTodo(item)}>Добавить</button>
+        <button style={{ marginLeft: 8 }} onClick={() => todo.fetchData()}>
+          Получить все списки
+        </button>
       </div>
+
       {todo.todos.map((t) => (
         <div key={t.id} className="todo">
           <input
