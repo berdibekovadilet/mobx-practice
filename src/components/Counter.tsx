@@ -1,9 +1,11 @@
 import { observer } from "mobx-react-lite";
-import { counter } from "../store/counter";
+// import { counterFunction } from "../store/counterFunc";
 import { useEffect } from "react";
 import { runInAction } from "mobx";
+import { CounterStoreClass } from "../store/counterClass";
 
-const store = counter();
+// const store = counterFunction();
+const store = new CounterStoreClass();
 
 type Props = {
   initialCount?: number;

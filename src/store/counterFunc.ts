@@ -1,6 +1,6 @@
 import { makeObservable, observable, action, computed } from "mobx";
 
-export function counter() {
+export function counterFunction() {
   return makeObservable(
     {
       count: 0,
