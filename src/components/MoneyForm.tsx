@@ -41,7 +41,7 @@ const MoneyForm = observer(() => {
         type="number"
         placeholder="Player age..."
         style={{ height: "40px" }}
-      //   value={formState.age}
+        value={formState.age}
         onChange={action((e) => {
           formState.age = Number(e.target.value);
         })}
@@ -50,7 +50,7 @@ const MoneyForm = observer(() => {
         type="number"
         placeholder="Yearly salary..."
         style={{ height: "40px" }}
-      //   value={formState.salary}
+        value={formState.salary}
         onChange={action((e) => {
           formState.salary = Number(e.target.value);
         })}

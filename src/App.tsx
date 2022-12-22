@@ -1,6 +1,7 @@
 import "./App.css";
 import MoneyForm from "./components/MoneyForm";
 import Roster from "./components/Roster";
+import TeamInfo from "./components/TeamInfo";
 import Athlete from "./store/athlete";
 import { TeamStoreProvider } from "./store/teamStore";
 // import Counter from "./components/Counter";
@@ -21,6 +22,7 @@ function App() {
         {/* <Counter initialCount={5} /> */}
         {/* <Todo /> */}
         <TeamStoreProvider players={players}>
+          <TeamInfo />
           <Roster />
           <MoneyForm />
         </TeamStoreProvider>
